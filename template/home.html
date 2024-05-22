@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #c14c4c;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        border-color: black;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+    h2 {
+        margin-top: 0;
+        font-size: 24px;
+        text-align: center;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    input[type="text"], input[type="email"], textarea {
+        width: calc(100% - 12px);
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    textarea {
+        height: 100px;
+    }
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #1c1616;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<form action="#" method="POST">
+    {% csrf_token %}
+    <h2>Fibonacci Generator</h2>
+    <label for="">Enter Number for fibonacci :</label>
+    <input type="text" name="num1" value="{{n1}}"  class="form-control">
+
+    
+
+    <button type="submit">Click</button>
+    <br>
+
+    <label for="">Fibonacci Series:</label>
+    <input type="text" value="{{output}}" class="form-control">
+
+</form>
+
+</body>
+</html>
