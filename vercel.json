@@ -4,7 +4,7 @@
         {
              "src": "poll/wsgi.py",
              "use": "@vercel/python",
-             "confi": { "maxLambdaSize": "15mb", "runtime":"python3.11.4"}
+             "config": { "maxLambdaSize": "15mb", "runtime":"python3.11.4"}
         },
         {
             "src": "build_files.sh",
